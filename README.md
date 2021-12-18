@@ -6,7 +6,7 @@ Pytorch implementation of "DLI-Net: Dual Local Interaction Network for Fine-Grai
 - pytorch 1.9
 
 ## Structure
-![image](DLI-Net4.svg)
+![image](structure.svg)
 
 ## Datasets
 There are six datasets used in our paper. To train our DLI-Net, you need change the parameters of dataset (e.g. `ph_train_root` and `ph_train_txt`). It is important to note that the folder structure of datasets need to be consistent with ours, otherwise you need to modify the code accordingly.
