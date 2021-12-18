@@ -8,14 +8,14 @@ python train_sketchy.py \
     --sk_test_txt /home/xjq/code/dataset/sketchy/sketch_test_relative_path.txt \
     --dict_path /home/xjq/code/dataset/sketchy/label_dict.npy \
     --feature_type mid \
-    --lr 0.00005 \
+    --lr 0.00001 \
     --batch_size 32 \
     --epoch 300 \
     --margin 0.1 \
     --self_interaction \
     --cross_interaction \
     --k 0.5 \
-    --norm_type 2norm \
+    --norm_type 1norm \
     --trip_weight 48 \
     --cls_weight 1 \
     --result_dir /home/xjq/code/shoe/DLI-Net/results

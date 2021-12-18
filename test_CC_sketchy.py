@@ -18,7 +18,6 @@ def train():
     # load model
     ph_encoder = Encoder("mid").cuda()
     sk_encoder = Encoder("mid").cuda()
-    # sk_encoder=ph_encoder
 
     self_interaction = SelfInteraction(0.5)
     match = CrossInteraction("2norm")
@@ -43,7 +42,7 @@ def train():
         test_sketch_dataset, batch_size=32, shuffle=False, num_workers=8
     )
 
-    # 测试
+    # test
     acc_1, acc_5, acc_10 = get_retrieval_acc(
         ph_encoder,
         sk_encoder,

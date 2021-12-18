@@ -33,9 +33,6 @@ class Encoder(nn.Module):
             out = torch.nn.functional.normalize(fea, dim=1)
         elif self.feature_type == "mid":
             fea = torch.nn.functional.normalize(fea, dim=1)
-            # fea_shape=fea.shape
-            # fea=torch.nn.functional.normalize(fea.flatten(1),dim=1)
-            # fea=fea.reshape(fea_shape)
             out = fea.flatten(2).permute(0, 2, 1)
         elif self.feature_type == "high":
             fea = torch.nn.functional.normalize(fea, dim=1)
@@ -45,8 +42,6 @@ class Encoder(nn.Module):
 
 if __name__ == "__main__":
     encoder = Encoder("global")
-    # print(list(encoder.backbone._modules.items())[0][1])
-    # input('s')
     x = torch.rand(4, 3, 256, 256)
     out = encoder(x)[0]
     print(out.shape)

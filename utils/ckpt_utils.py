@@ -20,17 +20,6 @@ def resume_model(resume_path, sketch_model, img_model):
 
 
 def save_model(opt, models, names, epoch, logger, others=None, best=False):
-    """save trained model
-
-    Arguments:
-        opt {[ArgumentParser]}
-        models {[list]}
-        names {[list]}
-        best {[bool]}
-        others {[dict]}
-        epoch {[int]}
-        logger {[type]}
-    """
     save_root = opt.checkpoint_path
     if not os.path.exists(save_root):
         os.makedirs(save_root)

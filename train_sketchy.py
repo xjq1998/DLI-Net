@@ -80,12 +80,11 @@ def train():
                 ph_fea = self_interaction(ph_fea)
                 sk_fea = self_interaction(sk_fea)
 
-            # cls_loss = (
-            #     torch.nn.functional.cross_entropy(ph_cls, label) + torch.nn.functional.cross_entropy(sk_cls, label)
-            # ) / 2
+            cls_loss = (
+                torch.nn.functional.cross_entropy(ph_cls, label) + torch.nn.functional.cross_entropy(sk_cls, label)
+            ) / 2
             trip_loss = cal_triplet_loss(match(ph_fea, sk_fea), opt.margin)
-            # loss = opt.trip_weight * trip_loss + opt.cls_weight * cls_loss
-            loss=trip_loss
+            loss = opt.trip_weight * trip_loss + opt.cls_weight * cls_loss
             loss_tracker.update(loss.item(), ph.shape[0])
             optimizer.zero_grad()
             loss.backward()

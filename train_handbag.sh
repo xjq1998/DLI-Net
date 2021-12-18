@@ -1,7 +1,7 @@
 python train_v1.py \
-    --ph_train_root /home/xjq/code/dataset/qmul-v1/handbags/edge \
+    --ph_train_root /home/xjq/code/dataset/qmul-v1/handbags/photo \
     --sk_train_root /home/xjq/code/dataset/qmul-v1/handbags/sketch \
-    --ph_test_root /home/xjq/code/dataset/qmul-v1/handbags/edge \
+    --ph_test_root /home/xjq/code/dataset/qmul-v1/handbags/photo \
     --sk_test_root /home/xjq/code/dataset/qmul-v1/handbags/sketch \
     --ph_train_txt /home/xjq/code/dataset/qmul-v1/handbags/photo_train_name.txt \
     --ph_test_txt /home/xjq/code/dataset/qmul-v1/handbags/photo_test_name.txt \

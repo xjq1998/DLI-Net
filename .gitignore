@@ -10,6 +10,9 @@ ckpt/
 
 #忽略所有.npy结尾文件
 *.npy
+*.svg
+*.ipynb
+!structure.svg
 
 *.pyc
 static/

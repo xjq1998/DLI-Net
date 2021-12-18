@@ -14,5 +14,5 @@ python train_v2.py \
     --self_interaction \
     --cross_interaction \
     --k 0.5 \
-    --norm_type 2norm \
+    --norm_type 1norm \
     --result_dir /home/xjq/code/shoe/DLI-Net/results

@@ -6,7 +6,7 @@ python train_sketchy.py \
     --ph_train_txt /home/xjq/code/dataset/sketchy/photo_seen_train.txt \
     --ph_test_txt /home/xjq/code/dataset/sketchy/photo_seen_test.txt \
     --sk_test_txt /home/xjq/code/dataset/sketchy/sketch_seen_test.txt \
-    --dict_path /home/xjq/code/dataset/sketchy/zs_label_dict.npy \
+    --dict_path /home/xjq/code/dataset/sketchy/CC_label_dict.npy \
     --feature_type mid \
     --lr 0.00001 \
     --batch_size 32 \

@@ -18,19 +18,18 @@ def train():
     # load model
     ph_encoder = Encoder('global').cuda()
     sk_encoder = Encoder('global').cuda()
-    # sk_encoder=ph_encoder
 
     # self_interaction = SelfInteraction(0.5)
     # match = CrossInteraction("2norm")
     self_interaction=None
     match=SimpleMatch('2norm')
 
-    ckpt_path = "/home/xjq/code/shoe/DLI-Net/ckpt/global-handbag.pth"
+    ckpt_path = "/home/xjq/code/shoe/DLI-Net/ckpt/dli-shoe-v1.pth"
     ckpt = torch.load(ckpt_path)
     ph_encoder.load_state_dict(ckpt["ph_encoder"])
     sk_encoder.load_state_dict(ckpt["sk_encoder"])
 
-    ph_test_root = "/home/xjq/code/dataset/qmul-v1/chairs/edge"
+    ph_test_root = "/home/xjq/code/dataset/qmul-v1/chairs/photo"
     ph_test_txt = "/home/xjq/code/dataset/qmul-v1/chairs/photo_test_name.txt"
     sk_test_root = "/home/xjq/code/dataset/qmul-v1/chairs/sketch"
     sk_test_txt = "/home/xjq/code/dataset/qmul-v1/chairs/sketch_test_name.txt"
