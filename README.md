@@ -9,7 +9,7 @@ Pytorch implementation of "DLI-Net: Dual Local Interaction Network for Fine-Grai
 ![image](structure.svg)
 
 ## Datasets
-There are six datasets used in our paper. To train our DLI-Net, you need change the parameters of `*.sh` (e.g. `ph_train_root` and `ph_train_txt`). It is important to note that the folder structure of datasets need to be consistent with ours, otherwise you need to modify the code accordingly.
+There are six datasets used in our paper. To train our DLI-Net, you need change the parameters of `*.sh` (e.g. `ph_train_root` and `ph_train_txt`). It is important to note that the folder structures of datasets need to be consistent with ours, otherwise you need to modify the code accordingly. Our folder structures are shown below.
 
 - QMUL-Shoe-v1/QMUL-Chair-v1/QMUL-Handbag
     ```
@@ -106,4 +106,4 @@ There are six datasets used in our paper. To train our DLI-Net, you need change 
     ```
 
 ## Training
-First modify the parameters in `*.sh` files, then use `bash *.sh` to train.
+First modify the parameters in `*.sh` files, then use `bash *.sh` to train model.
