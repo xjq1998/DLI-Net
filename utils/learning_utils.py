@@ -110,7 +110,11 @@ def get_retrieval_acc(
                 ).cpu()
             if dataset == "sketchy":
                 for i in range(sketch.shape[0]):
-                    sk_label_list.append(label[i].split('-')[0])
+                    sk_label = label[i].split('-')
+                    if len(sk_label)>2:
+                        sk_label_list.append(label[i][:-len(sk_label[-1])-1])
+                    else:
+                        sk_label_list.append(sk_label[0])
             else:
                 for i in range(sketch.shape[0]):
                     if len(label[i].split("_")) > 2:

@@ -1,3 +1,4 @@
+CUDA_VISIBLE_DEVICES=1 \
 python train_v2.py \
     --ph_train_root /home/xjq/code/dataset/qmul_v2/ShoeV2/trainB \
     --sk_train_root /home/xjq/code/dataset/qmul_v2/ShoeV2/trainA \
@@ -14,5 +15,5 @@ python train_v2.py \
     --self_interaction \
     --cross_interaction \
     --k 0.5 \
-    --norm_type 1norm \
+    --norm_type 2norm \
     --result_dir /home/xjq/code/shoe/DLI-Net/results

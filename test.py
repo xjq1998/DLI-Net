@@ -1,22 +1,27 @@
 from torch.utils.data.dataloader import DataLoader
-from model.encoder import Encoder
 from model.self_interaction import SelfInteraction
 from model.cross_interaction import CrossInteraction
+from model.simple_match import SimpleMatch
 from utils.learning_utils import get_retrieval_acc
 from dataset.sketchy_dataset import TestPhDataset,TestSkDataset
 import torch
 from torch.utils.data import DataLoader
 
+from model.encoder_sketchy import Encoder
+# ph_encoder=Encoder(feature_type='global').cuda()
+# sk_encoder=Encoder(feature_type='global').cuda()
 
 ph_encoder=Encoder().cuda()
 sk_encoder=Encoder().cuda()
 self_interaction=SelfInteraction(0.5)
 match=CrossInteraction('2norm')
-ckpt=torch.load('/home/xjq/code/shoe/DLI-Net/results/checkpoint/2021-11-18_21:03:45.826253/ckpt-best.pth')
+# self_interaction = None
+# match = SimpleMatch('2norm')
+ckpt=torch.load('/home/xjq/code/shoe/DLI-Net/ckpt/dli-sketchy.pth')
 ph_encoder.load_state_dict(ckpt['ph_encoder'])
 sk_encoder.load_state_dict(ckpt['sk_encoder'])
 
-ph_test_root='/home/xjq/code/dataset/sketchy/photo/tx_000100000000'
+ph_test_root='/home/xjq/code/dataset/sketchy/photo/tx_000000000000'
 ph_test_txt='/home/xjq/code/dataset/sketchy/photo_test_relative_path.txt'
 sk_test_root='/home/xjq/code/dataset/sketchy/sketch/tx_000100000000'
 sk_test_txt='/home/xjq/code/dataset/sketchy/sketch_test_relative_path.txt'
