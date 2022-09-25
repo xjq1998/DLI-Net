@@ -1,5 +1,5 @@
 # DLI-Net
-Pytorch implementation of "DLI-Net: Dual Local Interaction Network for Fine-Grained Sketch-Based Image Retrieval"
+Pytorch implementation of "DLI-Net: Dual Local Interaction Network for Fine-Grained Sketch-Based Image Retrieval". DLI-Net is the improved version of "DLA-Net for FG-SBIR: Dynamic Local Aligned Network for Fine-Grained Sketch-Based Image Retrieval". So you can also refer this code to implement DLA-Net.
 
 ## Environment
 - python 3.8
